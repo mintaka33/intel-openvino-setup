@@ -60,5 +60,14 @@ sudo apt install -y libpng12-dev
 
 ## 3. build
 
+```bash
+cd WORK_DIR
+mkdir build
+cd build
+
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make -j8
+```
+
 ## 4. test
 
