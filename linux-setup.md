@@ -91,5 +91,17 @@ python3 ./mo_caffe.py --input_model ~/tmp/VGG_VOC0712_SSD_300x300_iter_120000.ca
 #### run sample application
 
 ```bash
+
+# inference on CPU
+
 ./object_detection_sample_ssd -i ~/tmp/cat.jpg -m ~/tmp/VGG_VOC0712_SSD_300x300_iter_120000.xml
+
+# inference on GPU
+# to use GPU, need install intel opencl compute runtime driver
+# reference: https://github.com/mintaka33/vaapi-opencl-interop/blob/master/README.md
+
+./object_detection_sample_ssd -i ~/tmp/cat.jpg -m ~/tmp/VGG_VOC0712_SSD_300x300_iter_120000.xml -d GPU
+
 ```
+
+
