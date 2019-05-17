@@ -71,3 +71,25 @@ make -j8
 
 ## 4. test
 
+#### download model
+
+download SSD caffe model from this link
+
+https://github.com/weiliu89/caffe/tree/ssd
+```
+deploy.prototxt
+VGG_VOC0712_SSD_300x300_iter_120000.caffemodel
+```
+
+#### convert model
+
+```bash
+cd dldt-2019_R1.0.1/model-optimizer
+python3 ./mo_caffe.py --input_model ~/tmp/VGG_VOC0712_SSD_300x300_iter_120000.caffemodel --input_proto ~/tmp/deploy.prototxt  --output_dir ./
+```
+
+#### run sample application
+
+```bash
+./object_detection_sample_ssd -i ~/tmp/cat.jpg -m ~/tmp/VGG_VOC0712_SSD_300x300_iter_120000.xml
+```
