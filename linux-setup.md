@@ -98,7 +98,8 @@ python3 ./mo_caffe.py --input_model ~/tmp/VGG_VOC0712_SSD_300x300_iter_120000.ca
 
 ***inference on GPU**
 
-to use GPU, need install intel opencl compute runtime driver. refer to 
+to use GPU, need install intel opencl compute runtime driver. refer to
+
 https://github.com/mintaka33/vaapi-opencl-interop/blob/master/README.md
 
 ```bash
